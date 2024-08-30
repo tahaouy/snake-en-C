@@ -72,7 +72,7 @@ void deplacerSerpent() {
 
     if (modeJeu == 1) {
         if (serpentX[0] <= 0 || serpentX[0] >= LONGUEUR - 1 || serpentY[0] <= 0 || serpentY[0] >= LARGEUR - 1) {
-            printf("Game Over! Vous avez touch� un mur.\n");
+            printf("Game Over! Vous avez touch? un mur.\n");
             exit(0);
         }
     } else {
@@ -84,7 +84,7 @@ void deplacerSerpent() {
 
     for (int i = 1; i < tailleSerpent; i++) {
         if (serpentX[0] == serpentX[i] && serpentY[0] == serpentY[i]) {
-            printf("Game Over! Vous avez touch� votre propre corps.\n");
+            printf("Game Over! Vous avez touch? votre propre corps.\n");
             exit(0);
         }
     }
@@ -122,7 +122,7 @@ void mouvementversion1() {
 }
 
 void menu() {
-    printf("Choisissez un mode de jeu:\n1. Mode Normal\n2. Mode T�l�portation\nVotre choix: ");
+    printf("Choisissez un mode de jeu:\n1. Mode Normal\n2. Mode Teleportation\nVotre choix: ");
     scanf("%d", &modeJeu);
     while (modeJeu < 1 || modeJeu > 2) {
         printf("Choix invalide. Veuillez saisir 1 ou 2: ");
@@ -139,4 +139,3 @@ int main() {
     mouvementversion1();
     return 0;
 }
-
